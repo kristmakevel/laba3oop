@@ -10,7 +10,7 @@ int* auto_filling(int size, int mult) {
 }
 
 
-void array_wrong(int size, int mult, std::vector<int>& arr) {
+void array_not_that_wrong(int size, int mult, std::vector<int>& arr) {
     std::cout << "write all of the numbers for the second array \n";
     int x = 0;
     for (int i = 0; i < size; i++) {
@@ -42,6 +42,6 @@ int main() {
     delete[] arr; // есть delete -> без утечки
 
     std::vector <int> ar(size);
-    array_wrong(size, mult, ar);
+    array_not_that_wrong(size, mult, ar);
     return 0;
 }

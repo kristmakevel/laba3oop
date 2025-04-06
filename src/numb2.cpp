@@ -14,13 +14,16 @@ void array_wrong(int size, int mult, std::vector<int>& arr) {
     std::cout << "write all of the numbers for the second array \n";
     int x = 0;
     for (int i = 0; i < size; i++) {
-        int* new_n = new int;
+        auto new_n = std::make_unique<int>(); //умный указатель -> память очистится когда функция отработает
         std::cin >> x;
         *new_n = x * mult;
         arr[i] = *new_n;
     }
+    std::cout << "your second array: \n";
+    for (int i = 0;i < size;i++) {
+        std::cout << arr[i] << " ";
+    }
 }
-
 
 int main() {
     int size = 0;
@@ -40,10 +43,5 @@ int main() {
 
     std::vector <int> ar(size);
     array_wrong(size, mult, ar);
-    std::cout << "your second array: \n";
-    for (int i = 0; i < size; i++) {
-        std::cout << ar[i] << " ";
-    }
-    // внутри функции нет delete -> есть утечка
     return 0;
 }

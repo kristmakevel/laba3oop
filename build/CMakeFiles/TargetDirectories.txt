@@ -1,0 +1,6 @@
+C:/Users/macka/source/repos/kristmakevel/laba3oop/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/macka/source/repos/kristmakevel/laba3oop/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/macka/source/repos/kristmakevel/laba3oop/build/src/CMakeFiles/numb1.dir
+C:/Users/macka/source/repos/kristmakevel/laba3oop/build/src/CMakeFiles/numb2.dir
+C:/Users/macka/source/repos/kristmakevel/laba3oop/build/src/CMakeFiles/numb3.dir
+C:/Users/macka/source/repos/kristmakevel/laba3oop/build/src/CMakeFiles/numb4.dir

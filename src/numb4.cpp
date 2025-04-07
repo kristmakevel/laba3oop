@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <memory>
 #include <vector>
 
@@ -41,15 +41,14 @@ int main() {
     std::cout << "and now not in a block again \n";
     std::cout << first_one.use_count() << "\n";
     std::weak_ptr<archive> weak_arch = first_one;
-    std::cout << "not in a block \n" << first_one.use_count() << "\n";
     if (auto weakest_arch = weak_arch.lock()) {
-        std::cout << "count with weak_ptr:  " << weakest_arch.use_count() << "\n";
+        std::cout << "with weak_ptr\n" << weakest_arch.use_count() << "\n";
     }
     else {
         std::cout << "weak_ptr deleted :(\n";
     }
 
-    std::cout << "not in a block: " << first_one.use_count() << "\n";
+    std::cout << "not in a block of weak_ptr\n" << first_one.use_count() << "\n";
 
     return 0;
 }

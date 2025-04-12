@@ -4,17 +4,6 @@
 #include <fstream>
 
 
-class Files {
-    std::unique_ptr<std::fstream> file;
-public:
-    explicit Files(const std::string& file_name) {
-        file = std::make_unique<std::fstream>(file_name, std::ios::out);
-        if (!file->is_open()) throw std::runtime_error("can't open a file");
-    }
-    ~Files() { if (file) file->close(); } //деструктор, закрываем файл
-    void writing(const std::string& data) { *file << data; } //записываем данные в файл
-};
-
 int* auto_filling(int size, int mult) {
     int* auto_fill_arr = new int[size];
     for (int i = 0; i < size; i++) {
@@ -38,6 +27,18 @@ void array_not_that_wrong(int size, int mult, std::vector<int>& arr) {
         std::cout << arr[i] << " ";
     }
 }
+class Files {
+    std::unique_ptr<std::fstream> file;
+public:
+    explicit Files(const std::string& file_name) {
+        file = std::make_unique<std::fstream>(file_name, std::ios::out);
+        if (!file->is_open()) throw std::runtime_error("can't open a file");
+    }
+    void writing(const std::string& data) { *file << data; } //записываем данные в файл
+    ~Files() { if (file) file->close(); } //деструктор, закрываем файл
+
+};
+
 
 int main() {
     for (int i = 0; i < 10; i += 1) {

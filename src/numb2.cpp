@@ -41,7 +41,7 @@ void array_not_that_wrong(int size, int mult, std::vector<int>& arr) {
 
 int main() {
     for (int i = 0; i < 10; i += 1) {
-        auto idk = std::make_unique<int>(1000);
+        auto idk = std::make_unique<int>(500);
     }
     Files fh("test.txt");
     fh.writing("idk something");

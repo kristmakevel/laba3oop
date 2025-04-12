@@ -27,6 +27,8 @@ void array_not_that_wrong(int size, int mult, std::vector<int>& arr) {
         std::cout << arr[i] << " ";
     }
 }
+
+
 class Files {
     std::unique_ptr<std::fstream> file;
 public:
